@@ -51,7 +51,7 @@ class TemplateExtractor < WikiCloth::Parser
 end
 
 wiki_data = ""
-if ARGV[0] && File.exists?(ARGV[0])
+if ARGV[0] && File.exist?(ARGV[0])
   wiki_data = File.read(ARGV[0])
 else
   wiki_data = <<END_OF_DOC

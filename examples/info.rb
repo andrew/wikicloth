@@ -1,5 +1,5 @@
 require File.join(File.dirname(__FILE__),'../init.rb')
-if ARGV[0] && File.exists?(ARGV[0])
+if ARGV[0] && File.exist?(ARGV[0])
   data = File.read(ARGV[0])
 else
   data = "[[ this ]] is a [[ link ]] and another [http://www.google.com Google].  This is a <ref>reference</ref>, but this is a [[Category:Test]].  This is in another [[de:Sprache]]"

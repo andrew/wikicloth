@@ -32,7 +32,7 @@ module WikiCloth
 	rescue => err
 	  error = "<span class=\"error\">#{err.message}</span>"
 	end
-      elsif File.exists?(highlight_path)
+      elsif File.exist?(highlight_path)
         begin
           IO.popen("#{highlight_path} #{highlight_options} -f --syntax #{buffer.element_attributes['lang'].downcase}", "r+") do |io|
             io.puts content
